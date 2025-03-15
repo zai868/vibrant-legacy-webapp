@@ -21,11 +21,11 @@ const Navbar = () => {
     { name: 'Our Projects', path: '/our-projects' },
     { name: 'Our Mission', path: '/our-mission' },
     { name: 'Palmarès', path: '/palmares' },
-    { name: 'Actuality', path: '/news' },
+    { name: 'News', path: '/news' },
   ];
 
   return (
-    <nav className="sticky top-0 w-full z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+    <nav className="sticky top-0 w-full z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           <EnactusLogo className="h-10 w-auto" />
@@ -35,7 +35,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-white hover:text-enactus-yellow px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-800 hover:text-enactus-yellow px-3 py-2 text-sm font-medium transition-colors"
               >
                 {link.name}
               </Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
           
           <div className="md:hidden">
             <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Menu">
-              {isOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
+              {isOpen ? <X className="h-6 w-6 text-gray-800" /> : <Menu className="h-6 w-6 text-gray-800" />}
             </Button>
           </div>
         </div>
@@ -52,13 +52,13 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-black/90 shadow-lg">
+        <div className="md:hidden bg-white shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className="block text-white hover:text-enactus-yellow px-3 py-2 text-base font-medium"
+                className="block text-gray-800 hover:text-enactus-yellow px-3 py-2 text-base font-medium"
                 onClick={closeMenu}
               >
                 {link.name}
