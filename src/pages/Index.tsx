@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#0A0A0A] to-[#0D1B2A] text-white">
+    <div className="min-h-screen flex flex-col bg-black text-white">
       <Navbar />
       <Hero />
       
